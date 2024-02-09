@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:valentine/pages/details.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -31,6 +32,9 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _buildButton(String buttonText, String description) {
+    String valentineLink =
+        "https://www.cadburysilk.com/?utm_medium=cpc&utm_source=google-ads&utm_campaign=chc_cadbury-dairy-milk-silk_in_janfeb_2024_inr_eng_vday-perf_est-123_in24cd10_std_core&utm_term=broad&utm_content=perfmax&gclid=EAIaIQobChMIrd7P69KVhAMVk6NmAh0HgwxsEAAYASAAEgIzevD_BwE";
+
     return Container(
       width: 150,
       height: 120,
@@ -39,6 +43,11 @@ class HomeScreen extends StatelessWidget {
         cursor: SystemMouseCursors.click,
         child: ElevatedButton(
           onPressed: () {
+            if (buttonText == 'Valentine') {
+              _launchURL(valentineLink);
+            } else {
+              _launchURL('https://tinder.com/');
+            }
             print("$buttonText button pressed");
           },
           style: ElevatedButton.styleFrom(
@@ -163,7 +172,7 @@ class HomeScreen extends StatelessWidget {
               "https://in.bookmyshow.com/explore/home/national-capital-region-ncr",
           "PVR": "https://www.pvrcinemas.com/",
           "JUST DIAL": "https://www.justdial.com/Delhi/PVR-INOX/"
-        }
+        },
       }
     },
     {
@@ -202,6 +211,105 @@ class HomeScreen extends StatelessWidget {
         }
       }
     },
-    // Add entries for other days similarly
+    {
+      "day": "10 Teddy Day",
+      "event": "Gift a cute teddy bear to your loved one",
+      "additionalInfo": {
+        "Teddy day": {
+          "Myntra": "https://www.myntra.com/teddy-bear",
+          "firstcry":
+              "https://www.firstcry.com/soft-toys/teddy-bears?cid=5&scid=101&sub-type=t1-1797",
+          "amazon": "https://www.amazon.in/Soft-Toys/b?ie=UTF8&node=1378445031",
+          "gogift": "https://www.gogift.in/gift/by-type/teddy-bear"
+        }
+      }
+    },
+    {
+      "day": "11 Promise Day",
+      "event": "Make a promise to your loved one",
+      "additionalInfo": {
+        "Promise day": {
+          "quotes":
+              "https://indianexpress.com/article/lifestyle/life-style/happy-promise-day-2023-wishes-status-images-quotes-sms-whatsapp-messages-shayari-photos-8401202/",
+          "gifts": {
+            "FNP":
+                "https://www.fnp.com/gifts/promise-day-lp?utm_source=Google&utm_medium=cpc&utm_campaign=165874490&utm_adgroup=135962747001&utm_keyword=promise%20day%20gifts&utm_device=c&utm_placement=&utm_network=g&gad_source=1&gclid=CjwKCAiAq4KuBhA6EiwArMAw1InKfeeUoOR6PkThQskXfP6nZQpAmgO5aFHzP4yJrtmgA7sGkk-m9BoCAm0QAvD_BwE",
+            "amazon":
+                "https://www.amazon.in/s?k=promise+day+gifts&adgrpid=58936767356&ext_vrnc=hi&gclid=CjwKCAiAq4KuBhA6EiwArMAw1MtSl7zKvGDSNeBEBJEOiy0HMyYgJqFhimxyxtbdz2WixAgxpZ947RoCxr0QAvD_BwE&hvadid=590750011401&hvdev=c&hvlocphy=9061699&hvnetw=g&hvqmt=e&hvrand=7573430211416962338&hvtargid=kwd-355610419334&hydadcr=10525_2130650&tag=googinhydr1-21&ref=pd_sl_8oelvq17mf_e"
+          }
+        }
+      }
+    },
+    {
+      "day": "12 Hug Day",
+      "event": "Show your love with a warm hug",
+      "additionalInfo": {
+        "Hug day": {
+          "perfect places": [
+            "THE GARDEN OF FIVE SENSES: https://maps.app.goo.gl/RyNymnLyazyCyZvZ7",
+            "JHEEL PARK: https://maps.app.goo.gl/y8eHYnydGyGxcgpm7",
+            "ROSE CAFE: https://maps.app.goo.gl/HZ5Fjc2Ci4hGNemk7",
+            "PACIFIC MALL: https://maps.app.goo.gl/bctka8u2kZwvqvbM9",
+            "VEGAS MALL: https://maps.app.goo.gl/vHsEsPs5VVxvGxZ87"
+          ],
+          "gifts": {
+            "amazon": "https://www.amazon.in/Hug-Day-Gift/s?k=Hug+Day+Gift",
+            "FNP":
+                "https://www.fnp.com/gifts/hug-day-lp?utm_source=Google&utm_medium=cpc&utm_campaign=165874490&utm_adgroup=135962746761&utm_keyword=hug%20day%20gifts&utm_device=c&utm_placement=&utm_network=g&gad_source=1&gclid=CjwKCAiAq4KuBhA6EiwArMAw1IViRSo2Fi32bsMM-ddZLfgumbnj8rD6iP5AHmXY8wzMVU9oYjjoBhoC9IoQAvD_BwE",
+            "Flower aura":
+                "https://www.floweraura.com/hug-day?gclid=CjwKCAiAq4KuBhA6EiwArMAw1OsxwBkYXDKLQGV8Cz_BfUgvxvpCQVxyIIfz6BS3W52LfKmnGy6CHBoCcp4QAvD_BwE:G:s&keyword=happy+hug+day+gift&fa-matchtype=p&fa-adid=645965398254&fa-network=g&fa-device=c&fa-devicemodel=&fa-physicallocation=9061699&fa-geointent=&gad_source=1",
+          }
+        }
+      }
+    },
+    {
+      "day": "13 Kiss Day",
+      "event": "Seal your love with a sweet kiss",
+      "additionalInfo": {
+        "Kiss day": {
+          "BOOK MOVIE": {
+            "BOOK MY SHOW":
+                "https://in.bookmyshow.com/explore/home/national-capital-region-ncr",
+            "PVR": "https://www.pvrcinemas.com/",
+            "JUST DIAL": "https://www.justdial.com/Delhi/PVR-INOX/"
+          },
+          'perfect places': [
+            "THE GARDEN OF FIVE SENSES: https://goo.gl/maps/YnQZSngkNU2dfNwPA",
+            "JHEEL PARK: https://goo.gl/maps/y8eHYnydGyGxcgpm7",
+            "ROSE CAFE: https://goo.gl/maps/HZ5Fjc2Ci4hGNemk7",
+            "PACIFIC MALL: https://goo.gl/maps/bctka8u2kZwvqvbM9",
+            "VEGAS MALL: https://goo.gl/maps/vHsEsPs5VVxvGxZ87"
+          ]
+        }
+      }
+    },
+    {
+      "day": "14 Valentine's Day",
+      "event": "Express your love with roses",
+      "additionalInfo": {
+        "gifts": {
+          "flower bouquet":
+              "https://www.amazon.in/s?k=flower+bouquet&crid=9VWYNLX3SBXH&sprefix=flowe+bouque%2Caps%2C309&ref=nb_sb_noss_2",
+          "couple watches":
+              "https://www.amazon.in/s?k=couple+watches+titan+1639&crid=FS8CRVMGVTJQ&sprefix=couple+watches+titan+163%2Caps%2C254&ref=nb_sb_noss",
+          "explore more":
+              "https://www.amazon.in/s?k=couple+gifts+valentine&crid=31D6EILYKLCFE&sprefix=couple+gifts+valentines%2Caps%2C293&ref=nb_sb_noss"
+        },
+        "book hotels": "https://www.oyorooms.com/",
+        "BOOK MOVIE": {
+          "BOOK MY SHOW":
+              "https://in.bookmyshow.com/explore/home/national-capital-region-ncr",
+          "PVR": "https://www.pvrcinemas.com/",
+          "JUST DIAL": "https://www.justdial.com/Delhi/PVR-INOX/"
+        },
+      }
+    },
   ];
+  void _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 }

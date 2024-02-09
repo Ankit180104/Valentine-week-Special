@@ -1,7 +1,5 @@
-// details.dart
-import 'dart:js' as js;
-
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DetailsPage extends StatelessWidget {
   final String day;
@@ -23,20 +21,23 @@ class DetailsPage extends StatelessWidget {
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              event,
-              style: TextStyle(fontSize: 18),
-            ),
-            SizedBox(height: 10),
-            Text(
-              "Here are some ideas for you",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-            _buildAdditionalInfo(context, additionalInfo),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                event,
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 10),
+              Text(
+                "Here are some ideas for you",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 20),
+              _buildAdditionalInfo(context, additionalInfo),
+            ],
+          ),
         ),
       ),
     );
@@ -50,37 +51,35 @@ class DetailsPage extends StatelessWidget {
 
     additionalInfo.forEach((category, details) {
       widgets.add(
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 5),
-              Text(
-                category,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 5),
-            ],
-          ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 10),
+            Text(
+              category,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
+          ],
         ),
       );
 
       if (details is Map) {
         details.forEach((subCategory, subDetails) {
           if (subDetails is List) {
-            // Handle the case where subDetails is a list (e.g., "perfect places")
             List<Widget> placeWidgets = [];
             for (var place in subDetails) {
               placeWidgets.add(
-                Expanded(
-                  child: ListTile(
-                    title: Text(place),
-                    onTap: () {
-                      if (place.startsWith("http")) {
-                        _launchURL(place);
-                      }
-                    },
+                ListTile(
+                  title: Text(
+                    place,
+                    style: TextStyle(fontSize: 16),
                   ),
+                  onTap: () {
+                    if (place.startsWith("http")) {
+                      _launchURL(place);
+                    }
+                  },
                 ),
               );
             }
@@ -88,62 +87,76 @@ class DetailsPage extends StatelessWidget {
           } else if (subDetails is Map) {
             subDetails.forEach((nestedCategory, nestedDetails) {
               widgets.add(
-                Expanded(
-                  child: ListTile(
-                    title: Text("$subCategory - $nestedCategory"),
-                    subtitle:
-                        nestedDetails is String ? Text(nestedDetails) : null,
-                    onTap: () {
-                      if (nestedDetails is String &&
-                          nestedDetails.startsWith("http")) {
-                        _launchURL(nestedDetails);
-                      }
-                    },
+                ListTile(
+                  title: Text(
+                    "$subCategory - $nestedCategory",
+                    style: TextStyle(fontSize: 16),
                   ),
+                  subtitle: nestedDetails is String
+                      ? Text(
+                          nestedDetails,
+                          style: TextStyle(fontSize: 14),
+                        )
+                      : null,
+                  onTap: () {
+                    if (nestedDetails is String &&
+                        nestedDetails.startsWith("http")) {
+                      _launchURL(nestedDetails);
+                    }
+                  },
                 ),
               );
             });
           } else {
             widgets.add(
-              Expanded(
-                child: ListTile(
-                  title: Text(subCategory),
-                  subtitle: subDetails is String ? Text(subDetails) : null,
-                  onTap: () {
-                    if (subDetails is String && subDetails.startsWith("http")) {
-                      _launchURL(subDetails);
-                    }
-                  },
+              ListTile(
+                title: Text(
+                  subCategory,
+                  style: TextStyle(fontSize: 16),
                 ),
+                subtitle: subDetails is String
+                    ? Text(
+                        subDetails,
+                        style: TextStyle(fontSize: 14),
+                      )
+                    : null,
+                onTap: () {
+                  if (subDetails is String && subDetails.startsWith("http")) {
+                    _launchURL(subDetails);
+                  }
+                },
               ),
             );
           }
         });
       } else if (details is String) {
         widgets.add(
-          Expanded(
-            child: ListTile(
-              title: Text(details),
-              onTap: () {
-                if (details.startsWith("http")) {
-                  _launchURL(details);
-                }
-              },
+          ListTile(
+            title: Text(
+              details,
+              style: TextStyle(fontSize: 16),
             ),
+            onTap: () {
+              if (details.startsWith("http")) {
+                _launchURL(details);
+              }
+            },
           ),
         );
       }
     });
 
-    return Expanded(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: widgets,
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: widgets,
     );
   }
 
-  void _launchURL(String url) {
-    js.context.callMethod('open', [url]);
+  Future<void> _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
