@@ -18,8 +18,8 @@ class ContributorDetailsPage extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Color(0xFF5E1747),
-              Color(0xFF99337B),
+              Color.fromARGB(255, 228, 75, 180),
+              Color.fromARGB(255, 186, 70, 151),
               Color(0xFFD54AA5),
               Color(0xFFE687C3),
               Color(0xFFE1C0F0),
@@ -48,7 +48,6 @@ class ContributorDetailsPage extends StatelessWidget {
                       ),
                       _buildBulletPoint('Details:'),
                       _buildBulletPoint('- ${contributor.details}'),
-                      // Add more bullet points as needed
                       _buildBulletPoint(
                         'Checkout my Github here:',
                         url: contributor.link,
