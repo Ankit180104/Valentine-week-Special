@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AboutUsPage extends StatelessWidget {
   final List<Contributor> contributors = [
@@ -26,7 +27,10 @@ class AboutUsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('About Us'),
+        title: Text('About Us', style: GoogleFonts.happyMonkey(
+                  fontSize: 70,
+    
+                  color:Colors.black), ), 
       ),
       body: ListView.builder(
         itemCount: contributors.length,
