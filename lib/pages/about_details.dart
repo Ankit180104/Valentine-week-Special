@@ -86,7 +86,7 @@ class ContributorDetailsPage extends StatelessWidget {
           TextSpan(
             text: text,
             style: TextStyle(
-              color: Colors.indigo,
+              color: Colors.blueAccent,
               decoration: TextDecoration.underline,
             ),
             recognizer: TapGestureRecognizer()
