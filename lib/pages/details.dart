@@ -15,6 +15,7 @@ class DetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 230, 190, 203),
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 234, 94, 141),
         title: Text(day),

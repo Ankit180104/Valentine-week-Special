@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:valentine/pages/aboutUs.dart';
 import 'package:valentine/pages/details.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -12,7 +13,11 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 234, 94, 141),
-        title: Text("Valentine Special"),
+        title: Text("Valentine Special",
+            style: GoogleFonts.loveLight(
+                color: Colors.white,
+                fontSize: 50,
+                fontWeight: FontWeight.bold)),
         actions: [
           IconButton(
             icon: Icon(Icons.info),
@@ -28,6 +33,7 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          SizedBox(height: 20),
           _buildCalendar(),
           SizedBox(height: 20),
           Row(
@@ -46,7 +52,7 @@ class HomeScreen extends StatelessWidget {
   Widget _buildButton(String buttonText, String description) {
     String valentineLink =
         "https://www.cadburysilk.com/?utm_medium=cpc&utm_source=google-ads&utm_campaign=chc_cadbury-dairy-milk-silk_in_janfeb_2024_inr_eng_vday-perf_est-123_in24cd10_std_core&utm_term=broad&utm_content=perfmax&gclid=EAIaIQobChMIrd7P69KVhAMVk6NmAh0HgwxsEAAYASAAEgIzevD_BwE";
-//ANkit 
+//ANkit
     return Container(
       width: 150,
       height: 120,
@@ -181,8 +187,10 @@ class HomeScreen extends StatelessWidget {
         "Places you can Explore": {
           "Lodhi Garden":
               "https://www.google.com/maps/dir/NSUT,+Azad+Hind+Fauj+Marg,+Dwarka+Sector-3,+Dwarka,+Delhi/Lodhi+Rd,+Lodhi+Gardens,+Lodhi+Estate,+New+Delhi,+Delhi+110003/@28.588883,77.0454204,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x390d05dd375e5a13:0x108adaa3abe4bd07!2m2!1d77.0379647!2d28.6100216!1m5!1m1!1s0x390ce2ececc92e35:0x86c0764b1c0d4bea!2m2!1d77.2196794!2d28.5930959?entry=ttu",
-          "Sunder Nursery": "https://www.google.com/maps/dir/NSUT,+Azad+Hind+Fauj+Marg,+Dwarka+Sector-3,+Dwarka,+Delhi/Sunder+Nursery,+Bharat+Scouts+and+Guides+Marg,+Opposite+%E0%A4%B9%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A5%82%E0%A4%82+%E0%A4%9F%E0%A5%89%E0%A4%AE%E0%A5%8D%E0%A4%AC+%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%95,+Nizamuddin,+National+Zoological+Park,+Sundar+Nagar,+New+Delhi,+Delhi/@28.588883,77.0578673,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x390d05dd375e5a13:0x108adaa3abe4bd07!2m2!1d77.0379647!2d28.6100216!1m5!1m1!1s0x390ce31c00aad2d5:0x5c0ec58c756cec82!2m2!1d77.2451691!2d28.5956467?entry=ttu",
-          "More you can exlore": "https://www.tripadvisor.in/Attractions-g304551-Activities-c57-t58-New_Delhi_National_Capital_Territory_of_Delhi.html"
+          "Sunder Nursery":
+              "https://www.google.com/maps/dir/NSUT,+Azad+Hind+Fauj+Marg,+Dwarka+Sector-3,+Dwarka,+Delhi/Sunder+Nursery,+Bharat+Scouts+and+Guides+Marg,+Opposite+%E0%A4%B9%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A5%82%E0%A4%82+%E0%A4%9F%E0%A5%89%E0%A4%AE%E0%A5%8D%E0%A4%AC+%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%95,+Nizamuddin,+National+Zoological+Park,+Sundar+Nagar,+New+Delhi,+Delhi/@28.588883,77.0578673,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x390d05dd375e5a13:0x108adaa3abe4bd07!2m2!1d77.0379647!2d28.6100216!1m5!1m1!1s0x390ce31c00aad2d5:0x5c0ec58c756cec82!2m2!1d77.2451691!2d28.5956467?entry=ttu",
+          "More you can exlore":
+              "https://www.tripadvisor.in/Attractions-g304551-Activities-c57-t58-New_Delhi_National_Capital_Territory_of_Delhi.html"
         },
       }
     },
@@ -199,11 +207,12 @@ class HomeScreen extends StatelessWidget {
         "Places For a Date with partner": {
           "Guftagu Cafe":
               "https://www.google.com/maps/dir/NSUT,+Azad+Hind+Fauj+Marg,+Dwarka+Sector-3,+Dwarka,+Delhi/Guftagu+Cafe,+34+Main+Road,+DLF+Phase+2,+Sector+25,+Gurugram,+Haryana/@28.5468379,76.9809903,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x390d05dd375e5a13:0x108adaa3abe4bd07!2m2!1d77.0379647!2d28.6100216!1m5!1m1!1s0x390d192e241cf5ff:0xe07747ba5a08dbf0!2m2!1d77.094825!2d28.4852699?entry=ttu",
-          "Big tree Cafe": "https://www.google.com/maps/dir/NSUT,+Azad+Hind+Fauj+Marg,+Dwarka+Sector-3,+Dwarka,+Delhi/The+Big+Tree+Cafe,+opposite+Paras+Quartier,+Gwal+Pahari,+Gurugram,+Haryana/@28.5223577,76.9992864,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x390d05dd375e5a13:0x108adaa3abe4bd07!2m2!1d77.0379647!2d28.6100216!1m5!1m1!1s0x390d19f50603f797:0x58d281926f5de632!2m2!1d77.1323344!2d28.4364957?entry=ttu",
-          
+          "Big tree Cafe":
+              "https://www.google.com/maps/dir/NSUT,+Azad+Hind+Fauj+Marg,+Dwarka+Sector-3,+Dwarka,+Delhi/The+Big+Tree+Cafe,+opposite+Paras+Quartier,+Gwal+Pahari,+Gurugram,+Haryana/@28.5223577,76.9992864,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x390d05dd375e5a13:0x108adaa3abe4bd07!2m2!1d77.0379647!2d28.6100216!1m5!1m1!1s0x390d19f50603f797:0x58d281926f5de632!2m2!1d77.1323344!2d28.4364957?entry=ttu",
         },
         "Proposing Quotes": {
-          "Propose using these beautiful quotes": "https://awbi.in/happy-propose-day-2024-wishes-quotes-messages/"
+          "Propose using these beautiful quotes":
+              "https://awbi.in/happy-propose-day-2024-wishes-quotes-messages/"
         }
       }
     },
@@ -215,15 +224,16 @@ class HomeScreen extends StatelessWidget {
           "chocolate":
               "https://www.fnp.com/chocolates-lp?promo=redirectionsearch-chocolate",
           "Kitkat": "https://www.kitkat.in/",
-          "Cadbury":"https://cadburygifting.in/occasions/valentines-day-gifts.html?utm_campaign=&tm_medium=cpc&utm_source=google&utm_content=Valentine24&gad_source=1&gclid=CjwKCAiA2pyuBhBKEiwApLaIOxs72I-N6ZPw1WChY8wY9iZOMV3YFY0KUpX2PgrpsD-encp7fe25JxoC45YQAvD_BwE"
+          "Cadbury":
+              "https://cadburygifting.in/occasions/valentines-day-gifts.html?utm_campaign=&tm_medium=cpc&utm_source=google&utm_content=Valentine24&gad_source=1&gclid=CjwKCAiA2pyuBhBKEiwApLaIOxs72I-N6ZPw1WChY8wY9iZOMV3YFY0KUpX2PgrpsD-encp7fe25JxoC45YQAvD_BwE"
         },
-          "BOOK MOVIE": {
-            "BOOK MY SHOW":
-                "https://in.bookmyshow.com/explore/home/national-capital-region-ncr",
-            "PVR": "https://www.pvrcinemas.com/",
-            "JUST DIAL": "https://www.justdial.com/Delhi/PVR-INOX/"
-          }
+        "BOOK MOVIE": {
+          "BOOK MY SHOW":
+              "https://in.bookmyshow.com/explore/home/national-capital-region-ncr",
+          "PVR": "https://www.pvrcinemas.com/",
+          "JUST DIAL": "https://www.justdial.com/Delhi/PVR-INOX/"
         }
+      }
     },
     {
       "day": "10 Teddy Day",
@@ -307,14 +317,14 @@ class HomeScreen extends StatelessWidget {
           "explore more":
               "https://www.amazon.in/s?k=couple+gifts+valentine&crid=31D6EILYKLCFE&sprefix=couple+gifts+valentines%2Caps%2C293&ref=nb_sb_noss"
         },
-        
         "BOOK MOVIE": {
-          "BOOK MY SHOW":"https://in.bookmyshow.com/explore/home/national-capital-region-ncr",
+          "BOOK MY SHOW":
+              "https://in.bookmyshow.com/explore/home/national-capital-region-ncr",
           "PVR": "https://www.pvrcinemas.com/",
           "JUST DIAL": "https://www.justdial.com/Delhi/PVR-INOX/"
         },
-        "Last but not the Least":{
-          "Spend Time Together":"https://www.oyorooms.com/"
+        "Last but not the Least": {
+          "Spend Time Together": "https://www.oyorooms.com/"
         },
       }
     },
