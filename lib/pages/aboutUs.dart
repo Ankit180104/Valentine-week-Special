@@ -11,13 +11,13 @@ class AboutUsPage extends StatelessWidget {
         link: 'https://github.com/anmolIC03'),
     Contributor(
         name: 'Ankit Kumar Sharma',
-        image: 'images/ankit.jpg', // Replace with the path to your image
+        image: 'lib/images/ankit.jpg', // Replace with the path to your image
         details:
             'Role: Web Developer\n Skills: Specializing in web development.\n Currently pursuing a BTech degree in Instrumentation and Control Engineering from NSUT. Co-founder\n Aims to help others celebrate special occasions through the website.\n \n Co-Contributor\n Co-Founder of this project.',
         link: 'https://github.com/Ankit180104'),
     Contributor(
         name: 'Vishal',
-        image: 'images/vishal.jpg', // Replace with the path to your image
+        image: 'lib/images/vishal.jpg', // Replace with the path to your image
         details:
             'Role: Freelance Developer\n Skills: Pursuing a BTech degree in Instrumentation and Control Engineering from NSUT, contributes freelancing skills to create a fun website for special occasions.\n Actively participates in planning and executing future projects.\n \n Co-Contributor',
         link: 'https://github.com/Vishukaneki'),
