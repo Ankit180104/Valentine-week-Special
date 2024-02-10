@@ -7,13 +7,13 @@ class AboutUsPage extends StatelessWidget {
         name: 'Anmol Singh',
         image: 'lib/images/anmol.jpg', // Replace with the path to your image
         details:
-            'Role: Mobile App and Web Developer\n Skills: Proficient in Flutter for app development and building websites.\n Currently pursuing a BTech degree in Instrumentation and Control Engineering from NSUT.\n \n Co-Contributor\n Co-Founder',
+            'Role: Mobile App and Web Developer\n Skills: Proficient in Flutter for app development and building websites.\n Currently pursuing a BTech degree in Instrumentation and Control Engineering from NSUT.\n Many more are already planned and will be executed with time.\n \n Co-Contributor\n Co-Founder',
         link: 'https://github.com/anmolIC03'),
     Contributor(
         name: 'Ankit Kumar Sharma',
         image: 'images/ankit.jpg', // Replace with the path to your image
         details:
-            'Role: Web Developer\n Skills: Specializing in web development.\n Currently pursuing a BTech degree in Instrumentation and Control Engineering from NSUT. Co-founder\n Aims to help others celebrate special occasions through the website.\n \n Co-Contributor\n Co-Founder for this project.',
+            'Role: Web Developer\n Skills: Specializing in web development.\n Currently pursuing a BTech degree in Instrumentation and Control Engineering from NSUT. Co-founder\n Aims to help others celebrate special occasions through the website.\n \n Co-Contributor\n Co-Founder of this project.',
         link: 'https://github.com/Ankit180104'),
     Contributor(
         name: 'Vishal',
