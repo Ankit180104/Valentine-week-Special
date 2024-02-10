@@ -13,6 +13,7 @@ class ContributorDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        //change
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
