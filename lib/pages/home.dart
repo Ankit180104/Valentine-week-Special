@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 234, 94, 141),
-        title: Text("Sweet Birds"),
+        title: Text("Valentine Special"),
         actions: [
           IconButton(
             icon: Icon(Icons.info),
@@ -170,7 +170,7 @@ class HomeScreen extends StatelessWidget {
       "day": "7 Rose Day",
       "event": "Express your love with roses",
       "additionalInfo": {
-        "gifts": {
+        "Roses you can Buy": {
           "flower bouquet":
               "https://www.amazon.in/s?k=flower+bouquet&crid=9VWYNLX3SBXH&sprefix=flowe+bouque%2Caps%2C309&ref=nb_sb_noss_2",
           "couple watches":
@@ -178,12 +178,11 @@ class HomeScreen extends StatelessWidget {
           "explore more":
               "https://www.amazon.in/s?k=couple+gifts+valentine&crid=31D6EILYKLCFE&sprefix=couple+gifts+valentines%2Caps%2C293&ref=nb_sb_noss"
         },
-        "book hotels": "https://www.oyorooms.com/",
-        "BOOK MOVIE": {
-          "BOOK MY SHOW":
-              "https://in.bookmyshow.com/explore/home/national-capital-region-ncr",
-          "PVR": "https://www.pvrcinemas.com/",
-          "JUST DIAL": "https://www.justdial.com/Delhi/PVR-INOX/"
+        "Places you can Explore": {
+          "Lodhi Garden":
+              "https://www.google.com/maps/dir/NSUT,+Azad+Hind+Fauj+Marg,+Dwarka+Sector-3,+Dwarka,+Delhi/Lodhi+Rd,+Lodhi+Gardens,+Lodhi+Estate,+New+Delhi,+Delhi+110003/@28.588883,77.0454204,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x390d05dd375e5a13:0x108adaa3abe4bd07!2m2!1d77.0379647!2d28.6100216!1m5!1m1!1s0x390ce2ececc92e35:0x86c0764b1c0d4bea!2m2!1d77.2196794!2d28.5930959?entry=ttu",
+          "Sunder Nursery": "https://www.google.com/maps/dir/NSUT,+Azad+Hind+Fauj+Marg,+Dwarka+Sector-3,+Dwarka,+Delhi/Sunder+Nursery,+Bharat+Scouts+and+Guides+Marg,+Opposite+%E0%A4%B9%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A5%82%E0%A4%82+%E0%A4%9F%E0%A5%89%E0%A4%AE%E0%A5%8D%E0%A4%AC+%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%95,+Nizamuddin,+National+Zoological+Park,+Sundar+Nagar,+New+Delhi,+Delhi/@28.588883,77.0578673,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x390d05dd375e5a13:0x108adaa3abe4bd07!2m2!1d77.0379647!2d28.6100216!1m5!1m1!1s0x390ce31c00aad2d5:0x5c0ec58c756cec82!2m2!1d77.2451691!2d28.5956467?entry=ttu",
+          "More you can exlore": "https://www.tripadvisor.in/Attractions-g304551-Activities-c57-t58-New_Delhi_National_Capital_Territory_of_Delhi.html"
         },
       }
     },
@@ -191,29 +190,33 @@ class HomeScreen extends StatelessWidget {
       "day": "8 Propose Day",
       "event": "Take the next step in your relationship",
       "additionalInfo": {
-        "rose day": {
+        "Gifts you can offer while proposing": {
           "explore more":
-              "https://www.amazon.in/s?k=couple+gifts+valentine&crid=31D6EILYKLCFE&sprefix=couple+gifts+valentines%2Caps%2C293&ref=nb_sb_noss",
+              "https://www.amazon.in/Om-Jewells-Illuminating-Adjustable-FR1000922/dp/B07B9D83QM/ref=sr_1_7?crid=FLUSTMLWJK09&keywords=rings&qid=1707562224&sprefix=ring%2Caps%2C205&sr=8-7",
           "special gifts":
-              "https://www.amazon.in/s?k=rose+day+gift&crid=1RULYOZTPWD5I&sprefix=rose+day+%2Caps%2C325&ref=nb_sb_ss_ts-doa-p_1_9"
+              "https://www.amazon.in/Okos-Adjustable-Bracelet-Decorated-BROK1000009/dp/B08LKCLRY6/ref=sr_1_5?crid=26VBMBSYVR8Y2&keywords=bracelet+for+woman&qid=1707562256&sprefix=brace%2Caps%2C208&sr=8-5"
+        },
+        "Places For a Date with partner": {
+          "Guftagu Cafe":
+              "https://www.google.com/maps/dir/NSUT,+Azad+Hind+Fauj+Marg,+Dwarka+Sector-3,+Dwarka,+Delhi/Guftagu+Cafe,+34+Main+Road,+DLF+Phase+2,+Sector+25,+Gurugram,+Haryana/@28.5468379,76.9809903,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x390d05dd375e5a13:0x108adaa3abe4bd07!2m2!1d77.0379647!2d28.6100216!1m5!1m1!1s0x390d192e241cf5ff:0xe07747ba5a08dbf0!2m2!1d77.094825!2d28.4852699?entry=ttu",
+          "Big tree Cafe": "https://www.google.com/maps/dir/NSUT,+Azad+Hind+Fauj+Marg,+Dwarka+Sector-3,+Dwarka,+Delhi/The+Big+Tree+Cafe,+opposite+Paras+Quartier,+Gwal+Pahari,+Gurugram,+Haryana/@28.5223577,76.9992864,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x390d05dd375e5a13:0x108adaa3abe4bd07!2m2!1d77.0379647!2d28.6100216!1m5!1m1!1s0x390d19f50603f797:0x58d281926f5de632!2m2!1d77.1323344!2d28.4364957?entry=ttu",
+          
+        },
+        "Proposing Quotes": {
+          "Propose using these beautiful quotes": "https://awbi.in/happy-propose-day-2024-wishes-quotes-messages/"
         }
       }
     },
     {
       "day": "9 Chocolate Day",
-      "event": "Indulge in sweet moments together",
+      "event": "Spread love with chocolates",
       "additionalInfo": {
-        "Propose day": {
+        "Buy Chocolates for loved Ones": {
           "chocolate":
               "https://www.fnp.com/chocolates-lp?promo=redirectionsearch-chocolate",
-          "rose": "https://www.fnp.com/roses-lp?promo=redirectionsearch",
-          "perfect places": [
-            "THE GARDEN OF FIVE SENSES: https://maps.app.goo.gl/RyNymnLyazyCyZvZ7",
-            "JHEEL PARK: https://maps.app.goo.gl/y8eHYnydGyGxcgpm7",
-            "ROSE CAFE: https://maps.app.goo.gl/HZ5Fjc2Ci4hGNemk7",
-            "PACIFIC MALL: https://maps.app.goo.gl/bctka8u2kZwvqvbM9",
-            "VEGAS MALL: https://maps.app.goo.gl/vHsEsPs5VVxvGxZ87"
-          ],
+          "Kitkat": "https://www.kitkat.in/",
+          "Cadbury":"https://cadburygifting.in/occasions/valentines-day-gifts.html?utm_campaign=&tm_medium=cpc&utm_source=google&utm_content=Valentine24&gad_source=1&gclid=CjwKCAiA2pyuBhBKEiwApLaIOxs72I-N6ZPw1WChY8wY9iZOMV3YFY0KUpX2PgrpsD-encp7fe25JxoC45YQAvD_BwE"
+        },
           "BOOK MOVIE": {
             "BOOK MY SHOW":
                 "https://in.bookmyshow.com/explore/home/national-capital-region-ncr",
@@ -221,7 +224,6 @@ class HomeScreen extends StatelessWidget {
             "JUST DIAL": "https://www.justdial.com/Delhi/PVR-INOX/"
           }
         }
-      }
     },
     {
       "day": "10 Teddy Day",
@@ -258,11 +260,11 @@ class HomeScreen extends StatelessWidget {
       "additionalInfo": {
         "Hug day": {
           "perfect places": [
-            "THE GARDEN OF FIVE SENSES: https://maps.app.goo.gl/RyNymnLyazyCyZvZ7",
-            "JHEEL PARK: https://maps.app.goo.gl/y8eHYnydGyGxcgpm7",
-            "ROSE CAFE: https://maps.app.goo.gl/HZ5Fjc2Ci4hGNemk7",
-            "PACIFIC MALL: https://maps.app.goo.gl/bctka8u2kZwvqvbM9",
-            "VEGAS MALL: https://maps.app.goo.gl/vHsEsPs5VVxvGxZ87"
+            "THE GARDEN OF FIVE SENSES ",
+            "JHEEL PARK",
+            "ROSE CAFE ",
+            "PACIFIC MALL",
+            "VEGAS MALL"
           ],
           "gifts": {
             "amazon": "https://www.amazon.in/Hug-Day-Gift/s?k=Hug+Day+Gift",
@@ -285,19 +287,17 @@ class HomeScreen extends StatelessWidget {
             "PVR": "https://www.pvrcinemas.com/",
             "JUST DIAL": "https://www.justdial.com/Delhi/PVR-INOX/"
           },
-          'perfect places': [
-            "THE GARDEN OF FIVE SENSES: https://goo.gl/maps/YnQZSngkNU2dfNwPA",
-            "JHEEL PARK: https://goo.gl/maps/y8eHYnydGyGxcgpm7",
-            "ROSE CAFE: https://goo.gl/maps/HZ5Fjc2Ci4hGNemk7",
-            "PACIFIC MALL: https://goo.gl/maps/bctka8u2kZwvqvbM9",
-            "VEGAS MALL: https://goo.gl/maps/vHsEsPs5VVxvGxZ87"
-          ]
+          "perfect places": [
+            "JHEEL PARK",
+            "ROSE CAFE",
+            "VEGAS MALL",
+          ],
         }
       }
     },
     {
       "day": "14 Valentine's Day",
-      "event": "Express your love with roses",
+      "event": "The Day Only Made for Spreading love",
       "additionalInfo": {
         "gifts": {
           "flower bouquet":
@@ -307,12 +307,14 @@ class HomeScreen extends StatelessWidget {
           "explore more":
               "https://www.amazon.in/s?k=couple+gifts+valentine&crid=31D6EILYKLCFE&sprefix=couple+gifts+valentines%2Caps%2C293&ref=nb_sb_noss"
         },
-        "book hotels": "https://www.oyorooms.com/",
+        
         "BOOK MOVIE": {
-          "BOOK MY SHOW":
-              "https://in.bookmyshow.com/explore/home/national-capital-region-ncr",
+          "BOOK MY SHOW":"https://in.bookmyshow.com/explore/home/national-capital-region-ncr",
           "PVR": "https://www.pvrcinemas.com/",
           "JUST DIAL": "https://www.justdial.com/Delhi/PVR-INOX/"
+        },
+        "Last but not the Least":{
+          "Spend Time Together":"https://www.oyorooms.com/"
         },
       }
     },

@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 class AboutUsPage extends StatelessWidget {
   final List<Contributor> contributors = [
     Contributor(
-      name: 'Anmol',
-      image: 'lib/images/anmol.jpg', // Replace with the path to your image
-      details: 'Details about Contributor 1.',
+      name: 'Anmol Singh Sokhi',
+      image: 'lib/images/logo.png', // Replace with the path to your image
+      details: 'Hi there! My name is Anmol Singh Sokhi and I am currently pursuing a BTech degree in Instrumentation and Control Engineering from NSUT 🎓. I am proficient in the making Apps and build the website using flutter web with the help of other contributers. Many more are already planned and will be executed with time.',
     ),
     Contributor(
-      name: 'Contributor 2',
-      image: 'assets/contributor2.jpg', // Replace with the path to your image
-      details: 'Details about Contributor 2.',
+      name: 'Ankit Kumar Sharma',
+      image: 'lib/images/logo.png', // Replace with the path to your image
+      details: 'Hi there! My name is Ankit Kumar Sharma and I am currently pursuing a BTech degree in Instrumentation and Control Engineering from NSUT 🎓. While learning web development got the idea to explore more in this field so with the help of my classmates we started to build this website for this special week of february. The basic purpose of this website is to just help out others on how to celebrate their week. Many more are already planned and will be executed with time. ',
     ),
     Contributor(
-      name: 'Contributor 3',
-      image: 'assets/contributor3.jpg', // Replace with the path to your image
-      details: 'Details about Contributor 3.',
+      name: 'Vishal Kaneki',
+      image: 'lib/images/logo.png', // Replace with the path to your image
+      details: 'Hi there! My name is Vishal Kaneki and I am currently pursuing a BTech degree in Instrumentation and Control Engineering from NSUT 🎓. With a keen interest in freelancing i helped others in making this fun website for this special week. Many more are already planned and will be executed with time.',
     ),
   ];
 
@@ -66,6 +66,7 @@ class Contributor {
     required this.name,
     required this.image,
     required this.details,
+
   });
 }
 
