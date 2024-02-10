@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:valentine/pages/home.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'home.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -27,10 +27,11 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        // Navigate to the next screen
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => HomeScreen()),
-        );
+        Future.delayed(Duration(seconds: 1), () {
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => HomeScreen()),
+          );
+        });
       }
     });
   }
@@ -38,14 +39,26 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: FadeTransition(
-          opacity: _animation,
-          child: Text(
-            "Valentine Week",
-            style: TextStyle(
-              fontSize: 30.0,
-              fontWeight: FontWeight.bold,
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color(0xFF3F5EFB),
+              Color(0xFFFF7E5F),
+            ],
+          ),
+        ),
+        child: Center(
+          child: FadeTransition(
+            opacity: _animation,
+            child: Text(
+              "Sweet Birds",
+              style: GoogleFonts.loveLight(
+                  fontSize: 80,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
           ),
         ),

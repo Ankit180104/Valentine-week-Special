@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:valentine/pages/aboutUs.dart';
 import 'package:valentine/pages/details.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -11,7 +12,18 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 234, 94, 141),
-        title: Text("Valentine Week Special"),
+        title: Text("Sweet Birds"),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.info),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AboutUsPage()),
+              );
+            },
+          )
+        ],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
