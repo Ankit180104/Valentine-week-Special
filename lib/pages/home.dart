@@ -317,7 +317,7 @@ class HomeScreen extends StatelessWidget {
       "day": "14 Valentine's Day",
       "event": "The Day Only Made for Spreading love",
       "additionalInfo": {
-        "gifts": {
+        "For you Valentine": {
           "flower bouquet":
               "https://www.amazon.in/s?k=flower+bouquet&crid=9VWYNLX3SBXH&sprefix=flowe+bouque%2Caps%2C309&ref=nb_sb_noss_2",
           "couple watches":
